@@ -1,0 +1,15 @@
+<div>
+  <span>search employee</span>
+  <br />
+  <select *ngIf="employees" name = "employee" #e [(ngModel)] = "e.EmpId" (change)= "changeEmp(e.value)">
+    <option *ngFor="let e of employees" [value] = "e.EmpId">{{e.EmployeeName}}<div class = "imgEmp"></div></option>
+  </select>
+</div>
+<br />
+<div>
+  <ul *ngIf="parents">
+    <li *ngFor="let dep of parents">{{dep.DepartmentName}}</li>
+  </ul>
+</div>
+<br />
+<app-table-tasks (onSelectEmp) = getTaskByEmp()></app-table-tasks>

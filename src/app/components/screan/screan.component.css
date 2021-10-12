@@ -1,0 +1,9 @@
+.imgEmp{
+    height: 80px;
+    width: 80px;
+    background-image: url(../IMG_5632.JPG);
+    background-position: right;
+    margin: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
